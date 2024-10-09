@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Kalan-an: Grills And Restaurant</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <a href="#home" class="logo">
+            <img src="img/logo2.png" alt="Logo">
+        </a>
+        <nav class="navigation">
+
+            <ul class="left-links" type="none">
+                <li><a href="#about" class="link">About</a></li>
+                <li><a href="#menu" class="link">Cuisine</a></li>
+            
+                <li><a href="#reservation" class="link-res">Reservation</a></li>
+                <li><a href="#contact" class="link">Contact</a></li> 
+                <li><a class="link-log"><button id="loginBtnHeader" class="btnLogin-popup btn" onclick="document.querySelector('.wrapper').classList.remove('hidden')">Login</button></a></li>
+                <li><a class="link-log"><button id="logoutBtnHeader" class="btn hidden" onclick="logout()">Logout</button></a></li>
+                <div id="logoutBtn" class="hidden">
+                    <button class="btn hidden" onclick="logout()">Logout</button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- Homepage -->
+    <section id="home" class="home">
+        <div class="left">
+            <div id="logos">
+                <h2>FOLLOW US:</h2>
+                <a href="#"><ion-icon name="logo-tiktok" class="icon"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-facebook" class="icon"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram" class="icon"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter" class="icon"></ion-icon></a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="top">
+                <p>START YOUR MEAL WITH OUR EXCLUSIVE MENU</p>
+            <p><a href="#menu"><span>LEARN MORE...</span></a></p>
+            </div>
+            <div class="middle">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <div class="bottom">
+                <p>RESERVE YOUR TABLE <a href="#reservation"><span>NOW</span></a></p>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form onsubmit="event.preventDefault(); login();">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">I agree to the terms & conditions</label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+       <!-- About Us -->
+<section class="about" id="about">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>Garden Kalan-an offers a unique blend of traditional and modern Filipino cuisine. Our goal is to provide a memorable dining experience with freshly grilled food and a warm ambiance.</p>
+        </div>
+
+        <!-- Google Map Embed -->
+        <div class="about-map">
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.16995211523!2d122.75005481690052!3d11.583023803321408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a5f331d1a81153%3A0x52e48b4b73ded4f9!2sGarden%20Kalan-an%3A%20Grill%20and%20Restaurant!5e0!3m2!1sen!2sph!4v1728133955238!5m2!1sen!2sph"
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <h2>Our Menu</h2>
+        <p>Explore our range of delicious grilled items and signature dishes, crafted to satisfy your taste buds.</p>
+        <!-- Add menu items here -->
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation" id="reservation">
+        <h2>Reservation</h2>
+        <p>Reserve your table online and enjoy our mouth-watering dishes in a delightful environment.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries or reservations, reach us at:</p>
+        <p>Email: info@gardenkalan-an.com | Phone: +123-456-7890</p>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
