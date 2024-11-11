@@ -11,7 +11,7 @@
     <!-- Navigation -->
     <header>
         <a href="#home" class="logo">
-            <img src="img/logo2.png" alt="Logo">
+            <img src="img/logo.png" alt="Logo">
         </a>
         <nav class="navigation">
 
@@ -21,13 +21,18 @@
             
                 <li><a href="#reservation" class="link-res">Reservation</a></li>
                 <li><a href="#contact" class="link">Contact</a></li> 
-                <li><a class="link-log"><button id="loginBtnHeader" class="btnLogin-popup btn" onclick="document.querySelector('.wrapper').classList.remove('hidden')">Login</button></a></li>
-                <li><a class="link-log"><button id="logoutBtnHeader" class="btn hidden" onclick="logout()">Logout</button></a></li>
-                <div id="logoutBtn" class="hidden">
-                    <button class="btn hidden" onclick="logout()">Logout</button>
-                </div>
             </ul>
         </nav>
+        <ul>
+            <li><a class="link-log" href="#"><ion-icon name="log-in-outline" id="loginBtnHeader" class="btnLogin-popup" onclick="document.querySelector('.wrapper').classList.remove('hidden')"></ion-icon></a></li>
+            <li><a class="link-log"><ion-icon name="log-out-outline" id="logoutBtnHeader" class="btn hidden" onclick="logout()"></ion-icon></a></li>
+            <li><a class="link-log"><button id="logoutBtnHeader" class="btn hidden" onclick="logout()">Logout</button></a></li>
+            
+            <div id="logoutBtn" class="hidden">
+                <button class="btn hidden" onclick="logout()">Logout</button>
+            </div>
+        </ul>
+
     </header>
 
 
@@ -35,12 +40,26 @@
     <!-- Homepage -->
     <section id="home" class="home">
         <div class="left">
-            <div id="logos">
-                <h2>FOLLOW US:</h2>
-                <a href="#"><ion-icon name="logo-tiktok" class="icon"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-facebook" class="icon"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-instagram" class="icon"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-twitter" class="icon"></ion-icon></a>
+            <div class="social-icons">
+                <div class="icon-wrapper">
+                    <!-- Text above icons -->
+                    <h2 class="desktop-only">FOLLOW US</h2>
+                    
+                    <div class="icon-container">
+                        <a href="#" target="_blank" title="Facebook">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="#" target="_blank" title="Twitter">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                        <a href="#" target="_blank" title="Instagram">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="#" target="_blank" title="YouTube">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="right">
@@ -135,26 +154,310 @@
 </section>
 
     <!-- Menu Section -->
-    <section class="menu" id="menu">
-        <h2>Our Menu</h2>
-        <p>Explore our range of delicious grilled items and signature dishes, crafted to satisfy your taste buds.</p>
-        <!-- Add menu items here -->
-    </section>
+   <!-- Replace your existing menu section in index.html with this -->
+<section class="menu" id="menu">
+    <h2>Our Menu</h2>
+    <p>Explore our range of delicious grilled items and signature dishes, crafted to satisfy your taste buds.</p>
+    
+    <!-- Slider Section -->
+    <div class="menu-slider">
+        <div class="slider-container">
+            <div class="slide fade">
+                <img src="img/slide1.jpg" alt="Featured Dish 1">
+                <div class="slide-caption">Signature Grilled Specialties</div>
+            </div>
+            <div class="slide fade">
+                <img src="img/slide2.jpg" alt="Featured Dish 2">
+                <div class="slide-caption">Fresh Seafood Selection</div>
+            </div>
+            <div class="slide fade">
+                <img src="img/slide3.jpg" alt="Featured Dish 3">
+                <div class="slide-caption">Refreshing Beverages</div>
+            </div>
+
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="changeSlide(-1)">❮</a>
+            <a class="next" onclick="changeSlide(1)">❯</a>
+        </div>
+        
+        <!-- Dots/circles -->
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <!-- Menu Navigation -->
+    <div class="menu-nav">
+        <a href="#bestsellers" class="active">Best Sellers</a>
+        <a href="#grilled">Grilled Specialties</a>
+        <a href="#seafood">Seafood</a>
+        <a href="#drinks">Beverages</a>
+    </div>
+
+    <!-- Menu Sections -->
+    <div class="menu-sections">
+        <!-- Best Sellers Section -->
+        <div id="bestsellers" class="menu-section active">
+            <h3>Best Sellers</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/dish1.jpg" alt="Dish Name">
+                    <h4>Grilled Pork Belly</h4>
+                    <p>Tender and juicy grilled pork belly with special sauce</p>
+                    <span class="price">₱250</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/dish2.jpg" alt="Dish Name">
+                    <h4>Grilled Pork Belly</h4>
+                    <p>Tender and juicy grilled pork belly with special sauce</p>
+                    <span class="price">₱250</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/dish3.jpg" alt="Dish Name">
+                    <h4>Grilled Pork Belly</h4>
+                    <p>Tender and juicy grilled pork belly with special sauce</p>
+                    <span class="price">₱250</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/dish4.jpg" alt="Dish Name">
+                    <h4>Grilled Pork Belly</h4>
+                    <p>Tender and juicy grilled pork belly with special sauce</p>
+                    <span class="price">₱250</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/dish5.jpg" alt="Dish Name">
+                    <h4>Grilled Pork Belly</h4>
+                    <p>Tender and juicy grilled pork belly with special sauce</p>
+                    <span class="price">₱250</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/dish6.jpg" alt="Dish Name">
+                    <h4>Grilled Pork Belly</h4>
+                    <p>Tender and juicy grilled pork belly with special sauce</p>
+                    <span class="price">₱250</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/dish7.jpg" alt="Dish Name">
+                    <h4>Grilled Pork Belly</h4>
+                    <p>Tender and juicy grilled pork belly with special sauce</p>
+                    <span class="price">₱250</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/dish8.jpg" alt="Dish Name">
+                    <h4>Grilled Pork Belly</h4>
+                    <p>Tender and juicy grilled pork belly with special sauce</p>
+                    <span class="price">₱250</span>
+                </div>
+                <!-- Add more menu items as needed -->
+            </div>
+        </div>
+
+        <!-- Grilled Section -->
+        <div id="grilled" class="menu-section">
+            <h3>Grilled Specialties</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/grilled1.jpg" alt="Grilled Dish">
+                    <h4>BBQ Chicken</h4>
+                    <p>Marinated grilled chicken with homemade BBQ sauce</p>
+                    <span class="price">₱220</span>
+                </div>
+                <!-- Add more menu items as needed -->
+            </div>
+        </div>
+
+        <!-- Seafood Section -->
+        <div id="seafood" class="menu-section">
+            <h3>Seafood</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/seafood1.jpg" alt="Seafood Dish">
+                    <h4>Grilled Fish</h4>
+                    <p>Fresh catch of the day grilled to perfection</p>
+                    <span class="price">₱280</span>
+                </div>
+                <!-- Add more menu items as needed -->
+            </div>
+        </div>
+
+        <!-- Drinks Section -->
+        <div id="drinks" class="menu-section">
+            <h3>Beverages</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/drink1.jpg" alt="Beverage">
+                    <h4>Fresh Fruit Shake</h4>
+                    <p>Blended fresh fruits with ice cream</p>
+                    <span class="price">₱120</span>
+                </div>
+                <!-- Add more menu items as needed -->
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Reservation Section -->
-    <section class="reservation" id="reservation">
-        <h2>Reservation</h2>
-        <p>Reserve your table online and enjoy our mouth-watering dishes in a delightful environment.</p>
+    <section class="reservation-section" id="reservation">
+    <div class="reserve">
+        <div class="reservation-container">
+            <h2>Reserve Your Spot</h2>
+            <form class="reservation-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Reservation Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Reservation Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <button type="submit">Reserve Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="reservation-testimonials">
+        <h3>What Our Guests Say</h3>
+        <div class="testimonial-carousel">
+            <div class="testimonial">
+                <p>"Ice cream yummy, Ice cream good..."</p>
+                <span class="author">- Tatay Peng</span>
+            </div>
+            <div class="testimonial">
+                <p>"At ngayon ay malalaman natin kung ito ba ay Fact or Fake"</p>
+                <span class="author">- Fuego G.</span>
+            </div>
+            <div class="testimonial">
+                <p>"Recall!!!!!!!!"</p>
+                <span class="author">- Trippings</span>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+        <div class="carousel-dots">
+            <!-- Dots will be added dynamically with JavaScript -->
+        </div>
+    </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Contact Us</h2>
-        <p>For inquiries or reservations, reach us at:</p>
-        <p>Email: info@gardenkalan-an.com | Phone: +123-456-7890</p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Have questions about our services? Reach out to us using the contact information below or fill out the form.</p>
+                
+                <div class="contact-details">
+                    <a href="">
+                        <ion-icon name="location-outline"></ion-icon>
+                        Rizal Street, Roxas City, Capiz
+                    </a>
+                    <a href="">
+                        <ion-icon name="call-outline"></ion-icon>
+                        +123-456-7890
+                    </a>
+                    <a href="">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        codestylecrew@gmail.com
+                    </a>
+                    <a href="">
+                        <ion-icon name="time-outline"></ion-icon>
+                        Mon-Sun: 10:00 AM - 10:00 PM
+                    </a>
+                </div>
+            </div>
+    
+            <form class="contact-form">
+                <div class="success-message">
+                    Message sent successfully!
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+    
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Footer Section -->
+        <footer class="gk-footer">
+            <div class="gk-footer-content">
+                <div class="gk-footer-section">
+                    <h3>Garden Kalan-an</h3>
+                    <p>Grills and Restaurant</p>
+                    <p>Serving delicious grilled specialties since 2010</p>
+                </div>
+                <div class="gk-footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservation">Reservation</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="gk-footer-section">
+                    <h3>Contact Us</h3>
+                    <p><ion-icon name="location-outline"></ion-icon> Rizal Street, Roxas City, Capiz</p>
+                    <p><ion-icon name="call-outline"></ion-icon> +123-456-7890</p>
+                    <p><ion-icon name="mail-outline"></ion-icon> info@gardenkalan-an.com</p>
+                </div>
+                <div class="gk-footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="gk-social-icons">
+                        <a href="#" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            <div class="gk-footer-bottom">
+                <p>&copy; 2024 Garden Kalan-an. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script type="module" src="js/script.js"></script>
+        <script src="script.js"></script>
+
+        <!--Back to Top-->
+        <button id="backToTopBtn" title="Go to top">↑</button>
 
     <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
