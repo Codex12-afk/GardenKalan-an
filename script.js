@@ -16,7 +16,7 @@ iconClose.addEventListener('click', ()=> {wrapper.classList.remove('active-popup
 
 document.addEventListener('DOMContentLoaded', function() {
     // Select both navigation links and logo
-    const allLinks = document.querySelectorAll('.navigation .left-links a, .logo');
+    const allLinks = document.querySelectorAll('.navbar .nav-links a, .logo');
     
     allLinks.forEach(link => {
         link.addEventListener('click', smoothScroll);
@@ -278,3 +278,21 @@ function initializeBackToTopButton() {
 
 // Call this function when the document is loaded
 document.addEventListener('DOMContentLoaded', initializeBackToTopButton);
+
+
+
+const menuToggle = document.querySelector('.menu-toggle');
+const sidebar = document.querySelector('.sidebar');
+
+menuToggle.addEventListener('click', () => {
+    // Toggle sidebar visibility
+    if (sidebar.style.right === '0px') {
+        sidebar.style.right = '-150px'; // Hide sidebar
+        menuToggle.classList.remove('open'); // Remove open class
+        menuToggle.querySelector('.icon').textContent = '☰'; // Change icon back to hamburger
+    } else {
+        sidebar.style.right = '0px'; // Show sidebar
+        menuToggle.classList.add('open'); // Add open class
+        menuToggle.querySelector('.icon').textContent = '✖'; // Change icon to "X"
+    }
+});
