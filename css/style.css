@@ -1349,6 +1349,19 @@ iframe {
         padding: 40px;
     }
 
+    .about-text {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .about-map {
+        width: 100%; /* Full width on mobile */
+        margin-top: 20px; /* Space between text and map */
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack items vertically */
+    }
+
     iframe {
         height: 250px;
     }
