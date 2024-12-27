@@ -10,8 +10,7 @@ body {
 }
 
 header {
-    background-color: transparent;
-    backdrop-filter:blur(20px);
+    background: linear-gradient(to bottom, #000000, #000000, #70441c, #ff8200);
     color: #fff;
     padding: 20px;
     position: fixed;
@@ -28,9 +27,9 @@ header {
     padding: 10px 20px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo img {
+    width: 96px;
+    position: relative;
 }
 
 .logo span {
@@ -53,18 +52,6 @@ header {
     position: relative;
     padding: 20px;
     text-decoration: none;
-}
-
-#loginBtnHeader{
-    background-color: #ff9900;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 90px;
-    height: auto;
 }
 
 .nav-links .link::after {
@@ -135,11 +122,11 @@ header {
 
 .menu-toggle .icon {
     font-size: 24px;
-    transition: transform 0.3s ease; /* Smooth transition for the icon */
+    transition: transform 0.3s ease; /* Smooth transition */
 }
 
 .menu-toggle.open .icon {
-    transform: rotate(90deg); /* Rotate icon when open, or you can change the content */
+    transform: rotate(90deg); 
 }
 
 .sidebar {
@@ -172,338 +159,10 @@ header {
     padding: 10px;
 }
 
-/*header {
-    text-align: center;
-    padding: 1em 0;
-    background-color: transparent;
-    backdrop-filter:blur(20px);
-    z-index: 1;
-    position: fixed;
-    width: 100%;
-    height: 170px;
-  }
-  
-  header .logo img {
-    margin-bottom: 10px;
-    width: 90px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-  }
-  
-  nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-
-  .link, .link-res {
-    padding: 20px;
-    text-decoration: none;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
-    position: relative;
-    font-weight: 500;
-}
-
-.navigation .link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 120px;
-    height: 3px;
-    background: #fff;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
-}
-
-.navigation .link-res::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 150px;
-    height: 3px;
-    background: #fff;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
-}
-
-.navigation .link-log::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 120px;
-    height: 3px;
-    background: none;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
-}
-
-.navigation .link:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-.navigation .link-res:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-.navigation .link-log:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-.link:hover {
-    color: #ffc901;
-}
-
-.link-res:hover {
-    color: #ffc901;
-}
-
-.btnLogin-popup {
-    width: 130px;
-    height: 50px;
-    background: transparent;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #fff;
-    position: absolute;
-    transition: .5s;
-    top: 10px;
-    right: 10px;
-}
-
-.btnLogin-popup:hover {
-    background: #fff;
-    color: #162938;
-}
-
-#logoutBtnHeader{
-	width: 130px;
-	height: 50px;
-	background: transparent;
-	outline: none;
-	border-radius: 6px;
-	cursor: pointer;
-    color: #fff;
-	margin-left: 40px;
-    position: absolute;
-    right: 5%;
-	transition: .5s;
-	display: hidden;
-    top: 10px;
-    right: 10px;
-}
-
-#logoutBtnHeader:hover {
-    background: #fff;
-    color: #162938;
-} */
-
-.wrapper {
-    position: fixed;
-    background: transparent;		
-    width: 400px;
-    height: 440px;
-    border: 2px solid rgb(255, 255, 255, .5);
-    border-radius: 20px;
-    backdrop-filter:blur(20px);
-    box-shadow: 0 0 30px rgb(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-     overflow: hidden;
-    transform: scale(0);
-    transition: transform .5s ease, height .2s ease;
-}
-
-.wrapper .active-popup{
-    transform: scale(1);
-}
-
-.wrapper.active{
-    height: 520px;
-}
-
-.wrapper .form-box{
-    width: 100%;
-    padding: 40px;
-}
-
-.wrapper .form-box.login{
-transition: transform .18s ease;
-transform: translateX(0);
-}
-
-.wrapper.active .form-box.login{
-    transition: none;
-    transform: translateX(-400px);
-}
-
-.wrapper .form-box.register{
-    transition: none;
-    position: absolute;
-    transform: translateX(400px);
-}
-
-.wrapper.active .form-box.register{
-/*	display: none;  */
-transition: transform .18s ease;
-transform: translateX(0);
-position: absolute;
-}
-
-.wrapper .icon-close{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background: #162938;
-    font-size: 2em;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    z-index: 1;
-    
-}
-
-.wrapper.active-popup{
-transform: scale(1);
-}
-
-.form-box h2{
-    font-size: 2em;
-    color: #fff;
-    text-align: center;
-}
-
-.input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #162938;
-    margin: 30px 0;
-}
-
-.input-box label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-    pointer-events: none;
-    transition: .5s;
-}
-
-.input-box input:focus~label, .input-box input:valid~label {
-    top: -5px;
-}
-
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: #fff;
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-}
-
-.input-box .icon{
-    position: absolute;
-    right: 8px;
-    font-size: 1.2em;
-    color: #fff;
-    line-height: 57px;
-}
-
-.remember-forgot{
-    font-size: .9em;
-    color: #fff;
-    font-weight: 500;
-    display: flex;
-    justify-content: space-between;
-} 
-
-.remember-forgot label input {
-    accent-color: #fff;
-    margin-right: 3px;
-}
-
-.remember-forgot a{
-    color: #fff;
-    text-decoration: none;
-}
-
-.remember-forgot a:hover{
-    text-decoration: underline;
-}
-
-.btn{
-    width: 100%;
-    height: 45px;
-    background: #162938;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-}
-
-.login-register{
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-    margin: 10px 0 10px;
-    text-align: center;
-}
-
-.login-register p a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.login-register p a:hover{
-    text-decoration: underline;
-}
-
-.hidden {
-    display: none;
-}
-
 .home {
     width: 100%;
     min-height: 120vh;
-    background-image: url(place5.jpeg);
+    background-image: url(background.png);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -532,27 +191,22 @@ transform: scale(1);
 
 /* Social Media Icons Container */
 .social-icons {
-    position: absolute;
-    left: 20px;
-    bottom: 20%;
-    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 75%;
+    right: 10px;
+    transform: translateY(-50%);
+    bottom: auto;
+    background: transparent;
     padding: 15px;
     border-radius: 10px;
     backdrop-filter: blur(20px);
-    text-align: center; /* Center the content */
-}
-
-.icon-wrapper {
+    flex-direction: column;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    gap: 15px; /* Space between text and icons */
 }
 
-.desktop-only {
-    color: white;
-    font-size: 50px;
-    margin: 0;
+.icon-container {
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* Individual Icon Styling */
@@ -569,8 +223,7 @@ transform: scale(1);
 
 .icon-container {
     display: flex;
-    flex-direction: row; /* Keep icons in a row */
-    gap: 65px; /* Space between icons */
+    gap: 20px; /* Space between icons */
 }
 
 .right .top p {
@@ -595,8 +248,8 @@ transform: scale(1);
 
 /* Logo size adjustment */
 .middle img {
-    width: 300px; /* Adjust this size as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 300px; 
+    height: auto; 
     max-width: 100%;
 }
 
@@ -606,9 +259,7 @@ section {
     min-height: 100vh;
     padding: 60px 120px;
     text-align: center;
-    background-color: #fff;
-    background-image: url(bg3.jpg);
-    background-repeat: no-repeat;
+    background: linear-gradient(to right, #000000, #000000, #70441c, #ff8200);
     background-size: cover;
 }
 
@@ -670,7 +321,7 @@ iframe {
 }
 
 .contact-info h3 {
-    color: #444;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -681,7 +332,7 @@ iframe {
 
 .contact-info p {
     margin-bottom: 15px;
-    color: #666;
+    color: #fff;
     line-height: 1.6;
 }
 
@@ -692,7 +343,7 @@ iframe {
 
 .contact-info a {
     margin-bottom: 15px;
-    color: #666;
+    color: #fff;
     line-height: 1.6;
     cursor: pointer;
     text-decoration: none;
@@ -944,7 +595,6 @@ iframe {
     padding: 20px;
 }
 
-/* Continue adding these CSS styles */
 .menu-item {
     background: white;
     border-radius: 10px;
@@ -982,6 +632,46 @@ iframe {
     font-size: 1.2em;
 }
 
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.popup img {
+    max-width: 100%;
+    max-height: 700px; /* Set a maximum height for the image */
+    height: auto;
+    object-fit: cover;
+}
+
+.popup.active {
+    display: block; /* Show the popup */
+    opacity: 1; /* Fade in effect */
+}
+
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-overlay.active {
+    display: block; /* Show overlay */
+}
+
 /* Animation */
 @keyframes fade {
     from {opacity: .4} 
@@ -997,7 +687,9 @@ iframe {
 }
 
 .reserve {
-    width:60%; /* Adjust as needed */
+    width:60%;
+    display: flex;
+    justify-content: flex-end; /*to the right */
 }
 
 .reservation-container {
@@ -1252,14 +944,6 @@ iframe {
 /* Media Queries */
 @media (max-width: 1200px) {
 
-
-    .btnLogin-popup {
-        right: 20px;
-        width: 100px;
-        height: 35px;
-        font-size: 13px;
-    }
-
     ul {
         justify-content: right;
         width: 100%;
@@ -1290,8 +974,8 @@ iframe {
     .menu-toggle { 
         display: block; /* Ensure it is shown */
         position: fixed; /* Fixed position */
-        top: 30px; /* Adjust as needed */
-        right: 37%; /* Position it on the right */
+        top: 60px; /* Adjust as needed */
+        right: 10%; /* Position it on the right */
         font-size: 24px; 
         background: none; 
         border: none; 
@@ -1302,19 +986,13 @@ iframe {
 
     .home {
         min-height: 110vh;
-    }
-
-    .btnLogin-popup {
-        width: 60px;
-    }
-
-    #logoutBtnHeader {
-        width: 60px;
+        background-image: url('background1.png');
+        background-size: cover;
+        background-position: center;
     }
 
     .social-icons {
-        left: 0;
-        top: 50%;
+        top: 80%;
         transform: translateY(-50%);
         bottom: auto;
         position: fixed;
@@ -1322,10 +1000,6 @@ iframe {
 
     .social-icons a {
         font-size: 24px;
-    }
-
-    .desktop-only {
-        display: none; /* Hide text on mobile */
     }
 
     .icon-container {
@@ -1389,7 +1063,6 @@ iframe {
     }
 
     .menu-item {
-        /* Adjust individual item styles for mobile if needed */
         font-size: 0.9em; /* Slightly smaller font size */
     }
 
@@ -1417,7 +1090,8 @@ iframe {
 
     .reservation-container {
         max-width: 100%;
-        padding: 30px;
+        padding: 15px;
+        margin-top: 40px;
     }
 
     .reservation-form {

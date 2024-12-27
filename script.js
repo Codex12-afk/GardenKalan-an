@@ -1,19 +1,3 @@
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const btnPopup = document.querySelector('.btnLogin-popup');
-const iconClose = document.querySelector('.icon-close');
-
-registerLink.addEventListener('click', ()=> {wrapper.classList.add('active');});
-
-loginLink.addEventListener('click', ()=> {wrapper.classList.remove('active');});
-
-btnPopup.addEventListener('click', ()=> {wrapper.classList.add('active-popup');});
-
-iconClose.addEventListener('click', ()=> {wrapper.classList.remove('active-popup');});
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     // Select both navigation links and logo
     const allLinks = document.querySelectorAll('.navbar .nav-links a, .logo');
@@ -295,4 +279,34 @@ menuToggle.addEventListener('click', () => {
         menuToggle.classList.add('open'); // Add open class
         menuToggle.querySelector('.icon').textContent = '✖'; // Change icon to "X"
     }
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.menu-image');
+    const popup = document.createElement('div');
+    const overlay = document.createElement('div');
+
+    // Set up the popup and overlay
+    popup.classList.add('popup');
+    overlay.classList.add('popup-overlay');
+    document.body.appendChild(popup);
+    document.body.appendChild(overlay);
+
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            popup.innerHTML = `<img src="${image.src}" alt="Popup Image">`;
+            popup.classList.add('active');
+            overlay.classList.add('active');
+        });
+    });
+
+    // Close the popup when clicking on the overlay
+    overlay.addEventListener('click', () => {
+        popup.classList.remove('active');
+        overlay.classList.remove('active');
+    });
 });

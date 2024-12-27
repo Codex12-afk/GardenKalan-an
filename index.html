@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+
     <!-- Navigation -->
-
-
-
-
     <header>
         <nav class="navbar">
-            <div class="logo">Garden<span>Kalan-an</span></div>
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
             <button class="menu-toggle">
                 <span class="icon">☰</span>
             </button>
             <ul class="nav-links">
                 <li><a href="#home" class="link">Home</a></li>
                 <li><a href="#about" class="link">About</a></li>
-                <li><a href="#menu" class="link">Cuisine</a></li>
+                <li><a href="#menu" class="link">Menu</a></li>
                 <li><a href="#reservation" class="link-reserve">Reservation</a></li>
                 <li><a href="#contact" class="link">Contact</a></li>
             </ul>
-            <button id="loginBtnHeader" class="btnLogin-popup btn" onclick="document.querySelector('.wrapper').classList.remove('hidden')">Login</button>
         </nav>
     </header>
     
@@ -34,63 +33,23 @@
         <ul class="sidebar-links">
             <li><a href="#home" class="link">Home</a></li>
             <li><a href="#about" class="link">About</a></li>
-            <li><a href="#menu" class="link">Cuisine</a></li>
+            <li><a href="#menu" class="link">Menu</a></li>
             <li><a href="#reservation" class="link">Reserved</a></li>
             <li><a href="#contact" class="link">Contact</a></li>
         </ul>
     </div>
 
-
-
-
-
-   <!-- <header>
-        <a href="#home" class="logo">
-            <img src="img/logo.png" alt="Logo">
-        </a>
-        <nav class="navigation">
-
-            <ul class="left-links" type="none">
-                <li><a href="#about" class="link">About</a></li>
-                <li><a href="#menu" class="link">Cuisine</a></li>
-            
-                <li><a href="#reservation" class="link-res">Reservation</a></li>
-                <li><a href="#contact" class="link">Contact</a></li> 
-            </ul>
-        </nav>
-        <ul>
-            <li><a class="link-log" href="#"><ion-icon name="log-in-outline" id="loginBtnHeader" class="btnLogin-popup" onclick="document.querySelector('.wrapper').classList.remove('hidden')"></ion-icon></a></li>
-            <li><a class="link-log"><ion-icon name="log-out-outline" id="logoutBtnHeader" class="btn hidden" onclick="logout()"></ion-icon></a></li>
-            <li><a class="link-log"><button id="logoutBtnHeader" class="btn hidden" onclick="logout()">Logout</button></a></li>
-            
-            <div id="logoutBtn" class="hidden">
-                <button class="btn hidden" onclick="logout()">Logout</button>
-            </div>
-        </ul>
-    </header> -->
-
-
-
     <!-- Homepage -->
     <section id="home" class="home">
         <div class="left">
             <div class="social-icons">
-                <div class="icon-wrapper">
-                    <!-- Text above icons -->
-                    <h2 class="desktop-only">FOLLOW US</h2>
-                    
+                <div class="icon-wrapper">             
                     <div class="icon-container">
-                        <a href="#" target="_blank" title="Facebook">
+                        <a href="https://www.facebook.com/gardenkalanan" target="_blank" title="Facebook">
                             <ion-icon name="logo-facebook"></ion-icon>
                         </a>
-                        <a href="#" target="_blank" title="Twitter">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                        <a href="#" target="_blank" title="Instagram">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                        <a href="#" target="_blank" title="YouTube">
-                            <ion-icon name="logo-youtube"></ion-icon>
+                        <a href="codestylecrew@gmail.com" target="_blank" title="Facebook">
+                            <ion-icon name="mail"></ion-icon>
                         </a>
                     </div>
                 </div>
@@ -108,61 +67,6 @@
                 <p>RESERVE YOUR TABLE <a href="#reservation"><span>NOW</span></a></p>
             </div>
         </div>
-
-        <div class="wrapper">
-            <span class="icon-close"><ion-icon name="close"></ion-icon></span>
-            <div class="form-box login">
-                <h2>Login</h2>
-                <form onsubmit="event.preventDefault(); login();">
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forgot">
-                        <label><input type="checkbox">Remember me</label>
-                        <a href="#">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="login-register">
-                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-                    </div>
-                </form>
-            </div>
-            <div class="form-box register">
-                <h2>Registration</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="person"></ion-icon></span>
-                        <input type="text" required>
-                        <label>Username</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forgot">
-                        <label><input type="checkbox">I agree to the terms & conditions</label>
-                    </div>
-                    <button type="submit" class="btn">Register</button>
-                    <div class="login-register">
-                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-
     </section>
 
        <!-- About Us -->
@@ -199,7 +103,7 @@
             height="450" 
             style="border:0;" 
             allowfullscreen="" 
-            loading="lazy">
+            loading="lazy"> 
             </iframe>
         </div>
     </div>
@@ -216,15 +120,12 @@
         <div class="slider-container">
             <div class="slide fade">
                 <img src="img/slide1.jpg" alt="Featured Dish 1">
-                <div class="slide-caption">Signature Grilled Specialties</div>
             </div>
             <div class="slide fade">
                 <img src="img/slide2.jpg" alt="Featured Dish 2">
-                <div class="slide-caption">Fresh Seafood Selection</div>
             </div>
             <div class="slide fade">
                 <img src="img/slide3.jpg" alt="Featured Dish 3">
-                <div class="slide-caption">Refreshing Beverages</div>
             </div>
 
             <!-- Navigation arrows -->
@@ -255,49 +156,49 @@
             <h3>Best Sellers</h3>
             <div class="menu-items">
                 <div class="menu-item">
-                    <img src="img/dish1.jpg" alt="Dish Name">
+                    <img src="img/dish1.jpg" alt="Dish Name" class="menu-image">
                     <h4>GK Pork Sisig /w rice</h4>
                     <p>"Indulge in the rich, flavorful goodness of pork sisig with a side of steaming rice."</p>
                     <span class="price">₱99</span>
                 </div>
                 <div class="menu-item">
-                    <img src="img/dish2.jpg" alt="Dish Name">
+                    <img src="img/dish2.jpg" alt="Dish Name" class="menu-image">
                     <h4>GK Lechon Kawali /w rice</h4>
                     <p>"Savor the crunch of lechon kawali, paired perfectly with steaming rice."</p>
                     <span class="price">₱99</span>
                 </div>
                 <div class="menu-item">
-                    <img src="img/dish3.jpg" alt="Dish Name">
+                    <img src="img/dish3.jpg" alt="Dish Name" class="menu-image">
                     <h4>GK Fried Chicken /w rice</h4>
                     <p>"Fried chicken and rice – a timeless comfort meal that hits the spot."</p>
                     <span class="price">₱99</span>
                 </div>
                 <div class="menu-item">
-                    <img src="img/dish4.jpg" alt="Dish Name">
+                    <img src="img/dish4.jpg" alt="Dish Name" class="menu-image">
                     <h4>GK Pork sisig /w rice and egg</h4>
                     <p>"Crispy pork sisig, fluffy rice, and a perfectly fried egg – the ultimate comfort combo."/p>
                     <span class="price">₱112</span>
                 </div>
                 <div class="menu-item">
-                    <img src="img/dish5.jpg" alt="Dish Name">
+                    <img src="img/dish5.jpg" alt="Dish Name" class="menu-image">
                     <h4>GK Lomi</h4>
                     <p>"The perfect balance of savory broth and tender noodles – that's lomi."</p>
                     <span class="price">₱59</span>
                 </div>
                 <div class="menu-item">
-                    <img src="img/dish6.jpg" alt="Dish Name">
+                    <img src="img/dish6.jpg" alt="Dish Name" class="menu-image">
                     <h4>Grilled Pork Belly</h4>
                     <p>Tender and juicy grilled pork belly with special sauce</p>
                     <span class="price">₱99</span>
                 </div>
                 <div class="menu-item">
-                    <img src="img/dish7.jpg" alt="Dish Name">
+                    <img src="img/dish7.jpg" alt="Dish Name" class="menu-image">
                     <h4>GK Fried Pork</h4>
                     <p>"Crispy on the outside, tender on the inside – fried pork is pure bliss."</p>
                     <span class="price">₱95</span>
                 </div>
                 <div class="menu-item">
-                    <img src="img/dish8.jpg" alt="Dish Name">
+                    <img src="img/dish8.jpg" alt="Dish Name" class="menu-image">
                     <h4>GK Dinugu-an</h4>
                     <p>"Dinuguan is a true Filipino favorite, with the perfect balance of tang, spice, and memories in every bite."</p>
                     <span class="price">₱70</span>
@@ -352,6 +253,29 @@
 
     <!-- Reservation Section -->
     <section class="reservation-section" id="reservation">
+        <div class="reservation-testimonials">
+            <h3>What Our Guests Say</h3>
+            <div class="testimonial-carousel">
+                <div class="testimonial">
+                    <p>"No testimonial yet"</p>
+                    <span class="author">- Garden Kalan-an</span>
+                </div>
+                <div class="testimonial">
+                    <p>"This Website is unavailable yet"</p>
+                    <span class="author">- Garden Kalan-an</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Hope we can Serve you soon"</p>
+                    <span class="author">- Garden Kalan-an</span>
+                </div>
+                <!-- Add more testimonials as needed -->
+            </div>
+            <div class="carousel-dots">
+                <!-- Dots will be added dynamically with JavaScript -->
+            </div>
+        </div>
+
+
     <div class="reserve">
         <div class="reservation-container">
             <h2>Reserve Your Spot</h2>
@@ -387,28 +311,6 @@
                 </div>
                 <button type="submit" class="res-button">Reserve Now</button>
             </form>
-        </div>
-    </div>
-
-    <div class="reservation-testimonials">
-        <h3>What Our Guests Say</h3>
-        <div class="testimonial-carousel">
-            <div class="testimonial">
-                <p>"No testimonial yet"</p>
-                <span class="author">- Garden Kalan-an</span>
-            </div>
-            <div class="testimonial">
-                <p>"This Website is unavailable yet"</p>
-                <span class="author">- Garden Kalan-an</span>
-            </div>
-            <div class="testimonial">
-                <p>"Hope we can Serve you soon"</p>
-                <span class="author">- Garden Kalan-an</span>
-            </div>
-            <!-- Add more testimonials as needed -->
-        </div>
-        <div class="carousel-dots">
-            <!-- Dots will be added dynamically with JavaScript -->
         </div>
     </div>
     </section>
@@ -494,9 +396,6 @@
                     <h3>Follow Us</h3>
                     <div class="gk-social-icons">
                         <a href="#" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="#" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
-                        <a href="#" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <a href="#" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -518,8 +417,6 @@
 document.querySelectorAll('.order-button, .cta-button').forEach(button => {
     button.addEventListener('click', () => {
         alert('Redirecting to the order page...');
-        // You can replace this with code to navigate to the order page
-        // window.location.href = 'order.html';
     });
 });
         </script>
