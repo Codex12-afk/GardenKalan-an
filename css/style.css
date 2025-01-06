@@ -12,24 +12,30 @@ body {
 header {
     background: linear-gradient(to bottom, #000000, #000000, #70441c, #ff8200);
     color: #fff;
-    padding: 20px;
+    padding: 15px;
     position: fixed;
-    text-align: center;
     overflow: hidden;
-    z-index: 100;
+    z-index: 1000;
     width: 100%;
+    height: 140px;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
 .logo img {
-    width: 96px;
+    width: 110px;
+    align-items: center;
     position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+    left: 20px;
+}
+
+.logo :hover{
+    transform: scale(1.1);
 }
 
 .logo span {
@@ -50,7 +56,7 @@ header {
     text-decoration: none;
     font-weight: bold;
     position: relative;
-    padding: 20px;
+    padding: 15px;
     text-decoration: none;
 }
 
@@ -59,7 +65,7 @@ header {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 95px;
+    width: 80px;
     height: 3px;
     background: #fff;
     border-radius: 5px;
@@ -266,7 +272,7 @@ section p {
 
 .about-content {
     display: flex;
-    justify-content: space-between;
+    text-align: justify;
     align-items: flex-start;
     gap: 20px;
 }
@@ -277,7 +283,7 @@ section p {
 
 iframe {
     width: 100%;
-    height: 500px;
+    height: 600px;
     border: 0;
 }
 
@@ -448,7 +454,7 @@ iframe {
 
 /* Slider styles */
 .menu-slider {
-    max-width: 1000px;
+    max-width: 90%;
     position: relative;
     margin: 30px auto;
 }
@@ -464,8 +470,8 @@ iframe {
 
 .slide img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 800px;
+    object-fit: fill;
     border-radius: 10px;
 }
 
@@ -596,7 +602,7 @@ iframe {
 .menu-item img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .menu-item h4 {
@@ -776,7 +782,7 @@ iframe {
 
 .testimonial-carousel {
     position: relative;
-    height: 200px; /* Adjust based on your needs */
+    height: 400px; /* Adjust based on your needs */
     overflow: hidden;
 }
 
