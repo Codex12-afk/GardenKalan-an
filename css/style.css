@@ -179,6 +179,8 @@ header {
 
 .right {
     padding: 20px;
+    font-weight: bold;
+    margin-top: 40px;
 }
 
 /* Social Media Icons Container */
@@ -588,6 +590,9 @@ iframe {
 }
 
 .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: white;
     border-radius: 10px;
     overflow: hidden;
@@ -622,6 +627,7 @@ iframe {
     color: #ff7301;
     font-weight: bold;
     font-size: 1.2em;
+    margin-top: auto;
 }
 
 .popup {
@@ -671,7 +677,6 @@ iframe {
 }
 
 /* Reservation Section Styles */
-
 .reservation-section {
     padding: 50px 20px;
     display: flex;
@@ -685,8 +690,7 @@ iframe {
 }
 
 .reservation-container {
-    max-width: 800px;
-    width: 100%;
+    width: 95%;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -874,16 +878,23 @@ iframe {
 .gk-footer-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    margin-left: 20%;
 }
 
 .gk-footer-section {
     flex: 1;
     min-width: 200px;
     margin-bottom: 30px;
+}
+
+.gk-footer-section img{
+    width: 96px;
+    position: relative;
+    left: 8%;
 }
 
 .gk-footer-section h3 {
@@ -912,8 +923,11 @@ iframe {
 }
 
 .gk-social-icons {
+    position: relative;
     display: flex;
     gap: 15px;
+    align-items: center;
+    left: 9%;
 }
 
 .gk-social-icons a {
@@ -976,14 +990,14 @@ iframe {
     }
 
     .home {
-        min-height: 110vh;
+        min-height: 100vh;
         background-image: url('background1.png');
-        background-size: cover;
+        background-size: fill;
         background-position: center;
     }
 
     .social-icons {
-        top: 80%;
+        top: 83%;
         transform: translateY(-50%);
         bottom: auto;
         position: fixed;
@@ -1000,6 +1014,7 @@ iframe {
 
     .right{
         width: 100%;
+        margin-top: 120px;
     }
 
     .right .top p, .right .bottom p {
@@ -1092,6 +1107,15 @@ iframe {
     .gk-footer-content {
         flex-direction: column;
         align-items: center;
+        margin-left: 8%
+    }
+
+    .gk-footer-section img{
+        left: 0;
+    }
+
+    .gk-social-icons{
+        left: 45%;
     }
 
     .gk-footer-section {
