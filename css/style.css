@@ -997,7 +997,8 @@ iframe {
     }
 
     .social-icons {
-        top: 83%;
+        top: 75%;
+        right: 10px;
         transform: translateY(-50%);
         bottom: auto;
         position: fixed;
