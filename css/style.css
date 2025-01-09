@@ -868,6 +868,51 @@ iframe {
     visibility: visible;
 }
 
+.feedback-form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 40px auto;
+  }
+  
+  .feedback-form h2 {
+    font-size: 3.0em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-form p {
+    font-size: 1.3em;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+
+  .review-section{
+    min-height: 50vh;
+  }
+  
+  .feedback-form button {
+    background-color: #ff8200;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+  
+  .feedback-form button:hover {
+    background-color: #000000;
+    color: #fff;
+  }
+
 .gk-footer {
     background-color: #000;
     color: #fff;
